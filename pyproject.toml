@@ -1,0 +1,41 @@
+[project]
+name = "transformer-classifier-attachments"
+version = "0.1.0"
+description = "決算短信補足資料のTransformerセンチメント分析ツール"
+readme = "transformer_README.md"
+requires-python = ">=3.8.1"
+dependencies = [
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "datasets>=2.12.0",
+    "accelerate>=0.20.0",
+    "tokenizers>=0.13.0"
+]
+
+[project.scripts]
+transformer-sentiment = "transformer:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0", 
+    "flake8>=6.0.0"
+]
