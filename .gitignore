@@ -1,0 +1,58 @@
+# Python環境
+.python-version
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# uv関連
+uv.lock
+
+# IDE・エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS関連
+.DS_Store
+Thumbs.db
+*.log
+
+# プロジェクト固有
+# 大量の決算短信データ（サイズが大きいため除外）
+attachments/
+
+# テスト用・一時ファイル
+main.py
+temp/
+tmp/
+*.tmp
+
+# 結果ファイル（必要に応じてコミット）
+results/*.csv
+results/*.json
+!results/sample_*.csv
+!results/sample_*.json
+
+# Transformerモデルキャッシュ
+.cache/
+models/
+*.bin
+*.safetensors
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# ログファイル
+*.log
+logs/
